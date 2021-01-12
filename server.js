@@ -1,5 +1,7 @@
 // Required dependencies
 const express = require("express");
+const bodyParser = require("body-parser");
+const exphbs = require("express-handlebars");
 const app = express();
 
 // Define PORT
@@ -10,12 +12,10 @@ const PORT = process.env.PORT || 3000;
 app.use(express.static("public"));
 
 // Parse application body
-app.use(express.urlencoded({ extended: true }));
-app.use(express.json());
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.json());
 
-// Set handlebars
-const exphbs = require("express-handlebars");
-
+// Set up handlebars
 app.engine("handlebars", exphbs({ defaultLayout: "main" }));
 app.set("view engine", "handlebars");
 

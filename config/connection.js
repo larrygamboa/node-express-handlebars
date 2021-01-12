@@ -1,8 +1,9 @@
-// ========== Set up MySQL connection ========== //
+// Set up MySQL connection
 
-// Import mysql npm package
+// Required dependencies
 const mysql = require("mysql");
 
+// Connect to database
 const connection = mysql.createConnection({
   host: "localhost",
   port: 3306,
@@ -11,7 +12,7 @@ const connection = mysql.createConnection({
   database: "burgers_db"
 });
 
-// Make connection
+// Make sure connection works
 connection.connect(function(err) {
   if (err) {
     console.error("error connecting: " + err.stack);
