@@ -37,6 +37,7 @@ var orm = {
     // Display all burgers in the database
     selectAll: function(table, cb) {
         var queryString = "SELECT * FROM " + table + ";";
+        
         // Run connection query
         connection.query(queryString, function(err, res) {
             if (err) {
@@ -57,6 +58,7 @@ var orm = {
 
         console.log(queryString);
 
+        // Run connection query
         connection.query(queryString, vals, function(err, res) {
             if (err) {
                 throw err;
@@ -74,6 +76,7 @@ var orm = {
 
         console.log(queryString);
 
+        // Run connection query
         connection.query(queryString, vals, function(err, res) {
             if (err) {
                 throw err;
@@ -87,6 +90,7 @@ var orm = {
         queryString += " WHERE ";
         queryString += condition;
 
+        // Run connection query
         connection.query(queryString, function(err, res) {
             if (err) {
                 throw err;
