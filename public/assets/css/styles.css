@@ -1,0 +1,43 @@
+body {
+    font-family: 'Lato', sans-serif;
+}
+
+.jumbotron {
+    border-radius: 0 !important;
+    background: url(../images/big-kahuna-burger.jpg) #393727 center no-repeat;
+    background-size: cover;
+}
+
+.jumbotron h1,
+.jumbotron p,
+.jumbotron h2,
+.jumbotron label {
+    color: #FFF;
+}
+
+.jumbotron h1,
+.jumbotron h2 {
+    font-family: 'Anton', sans-serif;
+}
+
+.jumbotron p,
+.jumbotron label {
+    font-size: 1.25em;
+}
+
+.panel {
+    padding: 0.5em;
+}
+
+.panel-heading {
+    color: #FFF;
+    font-size: 1.25em;
+    margin-bottom: 1em;
+    background-color: #393727;
+    padding: 0.25em 0 0.25em 0.5em;
+}
+
+.panel-body ul li {
+    font-size: 1.25em;
+    list-style: none;
+}

@@ -1,7 +1,7 @@
 <div class="container">
 
     <div class="jumbotron">
-        <h1>Mm-hmm! This is a tasty burger!</h1>
+        <h1>Mm-hmm!<br>This is a tasty burger!</h1>
         <p>Hamburgers! The cornerstone of any nutritious breakfast.</p>
         <br>
         <h2>Make a Burger</h2>
@@ -26,8 +26,10 @@
                     <ul>
                         {{#each burgers}}
                             {{#unless devoured}}
-                                <span><strong> {{this.id}} - {{this.burger_name}} </strong></span>
-                                <button type="button" class="eatburger btn btn-warning" id ="eatbutton" data-id="{{this.id}}" data-newDevoured="{{devour}}"><span class="fa fa-cutlery"></span></button>
+                                <li>
+                                    <span><strong> {{this.id}} - {{this.burger_name}} </strong></span>
+                                    <button type="button" class="eatburger btn btn-warning" id ="eatbutton" data-id="{{this.id}}" data-newDevoured="{{devour}}"><span class="fa fa-cutlery"></span></button>
+                                </li>
                                 <hr>
                             {{/unless}}
                         {{/each}}
@@ -43,8 +45,10 @@
                     <ul>
                         {{#each burgers}}
                             {{#if devoured}}
-                                <span><strong> {{this.id}} - {{this.burger_name}} </strong></span>
+                                <li>
+                                    <span><strong> {{this.id}} - {{this.burger_name}} </strong></span>
                                 <button type="button" class="trashburger btn btn-danger" id ="trashbutton" data-id="{{this.id}}" data-newDevoured="{{devour}}"><span class="fa fa-trash"></span></button>
+                                </li>
                                 <hr>
                             {{/if}}
                         {{/each}}
